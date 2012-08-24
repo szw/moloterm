@@ -13,7 +13,7 @@ if !exists('g:moloterm_loaded')
     let g:moloterm_loaded = 1
 
     if !exists('g:moloterm_overlengths')
-        let g:moloterm_overlengths = [['vim', 20], ['ruby', 40]]
+        let g:moloterm_overlengths = [['*', 0]]
     end
 
     if !exists('g:moloterm_overlength_name')
