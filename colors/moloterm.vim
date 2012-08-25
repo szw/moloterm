@@ -9,33 +9,6 @@ hi clear
 set background=dark
 let g:colors_name="moloterm"
 
-if !exists('g:moloterm_loaded')
-    let g:moloterm_loaded = 1
-
-    if !exists('g:moloterm_overlengths')
-        let g:moloterm_overlengths = [['*', 0]]
-    end
-
-    if !exists('g:moloterm_overlength_name')
-        let g:moloterm_overlength_name = 'Error'
-    end
-
-    au InsertEnter * call s:highlight_overlength()
-    au InsertLeave * call clearmatches()
-
-    fun s:highlight_overlength()
-        for entry in g:moloterm_overlengths
-            if entry[1] > 0
-                for ft in split(entry[0], ',')
-                    if ft == &ft || ft == '*'
-                        return matchadd(g:moloterm_overlength_name, '\%>' . entry[1] . 'v.\+', -1)
-                    endif
-                endfor
-            endif
-        endfor
-    endfun
-endif
-
 hi Boolean         ctermfg=135
 hi Character       ctermfg=144
 hi Number          ctermfg=135
