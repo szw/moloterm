@@ -30,7 +30,7 @@ if !exists('g:moloterm_overlength_name')
 end
 
 augroup Moloterm
-	au!
+    au!
     au InsertEnter * call s:highlight_overlength()
     au InsertLeave * call clearmatches()
 augroup END
