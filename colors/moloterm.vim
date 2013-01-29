@@ -5,6 +5,10 @@
 "
 " This theme supports 256-color terminal only.
 
+if &t_Co != 256
+    finish
+endif
+
 hi clear
 set background=dark
 let g:colors_name="moloterm"
