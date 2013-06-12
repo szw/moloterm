@@ -99,3 +99,5 @@ hi SpecialKey      ctermfg=59
 hi TabLine         ctermfg=fg  ctermbg=242   cterm=none
 hi TabLineFill     ctermfg=fg  ctermbg=237   cterm=none
 
+" No tildas
+hi nontext ctermfg=bg guifg=bg cterm=NONE gui=NONE
