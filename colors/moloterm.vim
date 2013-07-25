@@ -45,26 +45,26 @@ let s:gui_colors = [
 function! s:hi(group, data)
   let cmd = "hi " . a:group
 
-  if exists("data.fg")
-    let cmd .= " ctermfg=" . data.fg . " guifg="
-    if type(data.fg) == 0
-      let cmd .= s:gui_colors[data.fg]
+  if exists("a:data.fg")
+    let cmd .= " ctermfg=" . a:data.fg . " guifg="
+    if type(a:data.fg) == 0
+      let cmd .= s:gui_colors[a:data.fg]
     else
-      let cmd .= data.fg
+      let cmd .= a:data.fg
     endif
   endif
 
-  if exists("data.bg")
-    let cmd .= " ctermbg=" . data.bg . " guibg="
-    if type(data.bg) == 0
-      let cmd .= s:gui_colors[data.bg]
+  if exists("a:data.bg")
+    let cmd .= " ctermbg=" . a:data.bg . " guibg="
+    if type(a:data.bg) == 0
+      let cmd .= s:gui_colors[a:data.bg]
     else
-      let cmd .= data.bg
+      let cmd .= a:data.bg
     endif
   endif
 
-  if exists("data.opts")
-    let cmd .= " cterm=" . data.opts . " gui=" . data.opts
+  if exists("a:data.opts")
+    let cmd .= " cterm=" . a:data.opts . " gui=" . a:data.opts
   endif
 
   silent! exe cmd
