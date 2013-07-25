@@ -52,8 +52,8 @@ hi MoreMsg         ctermfg=229
 hi Operator        ctermfg=161
 
 " complete menu
-hi Pmenu           ctermfg=81  ctermbg=16
-hi PmenuSel        ctermfg=255 ctermbg=243
+hi Pmenu           ctermfg=15  ctermbg=241
+hi PmenuSel        ctermfg=232 ctermbg=255
 hi PmenuSbar       ctermbg=234
 hi PmenuThumb      ctermfg=243
 
